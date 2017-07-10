@@ -1,0 +1,104 @@
+// Card CSS
+
+.card {
+	border-radius: 14px;
+	border: none;
+	margin-bottom: 25px;
+	box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.08);
+}
+
+.card:hover {
+	 box-shadow: 0 0 22px 0 rgba(0, 0, 0, 0.07);
+}
+
+.card-img-top {
+	border-top-right-radius: 14px;
+	border-top-left-radius: 14px;
+	width: auto;
+}
+
+.progress_card i {
+	color: white;
+}
+
+.progress_card {
+	color: white;
+}
+
+.card-footer {
+	border-bottom-left-radius: 14px;
+	border-bottom-right-radius: 14px;
+	background-color: white;
+	border-top: none;
+}
+
+.card-img-black {
+	opacity: 0.45;
+	background-color: #00000;
+}
+
+.card-footer:last-child {
+	border-bottom-left-radius: 14px;
+	border-bottom-right-radius: 14px;
+}
+
+.btn {
+	border-radius: 14px;
+}
+
+.btn-card-resume {
+	background-color: #63aeff;
+	border-color: none;
+	color: black;
+	letter-spacing: 1.8px;
+}
+
+.btn-card-start {
+	background-color: #50e3c2;
+	border-color: none;
+	letter-spacing: 1.8px;
+	color: black;
+}
+
+.bottom_icons {
+	float: right;
+	}
+
+.bottom_font_icon {
+	vertical-align: middle;
+	margin-left: 21px;
+}
+
+//Topic Card
+
+.tpoic_card {
+	border-color: transparent;
+	background-color: transparent;
+	box-shadow: none;
+}
+
+.topic_card .card-title {
+	text-align: center;
+	padding-top: 25%;
+}
+
+// path_cover Card
+
+.path_card_image_container {
+	max-height: 122px;
+
+}
+
+.path_card_wrapper:after {
+    bottom: 10px;
+    left: 50%;
+    margin-left: -5px;
+    width: 10px;
+    height: 47px;
+    background: #d4d9dd;
+    border-radius: 5px;
+}
+
+.subtitle_path_card {
+	color: grey;
+}

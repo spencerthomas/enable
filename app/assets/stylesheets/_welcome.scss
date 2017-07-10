@@ -1,0 +1,53 @@
+// Welcome
+
+.jumbotron {
+	background-color: transparent;
+	padding: 25px;
+	margin-bottom: 0px;
+}
+
+.welcome_path {
+	border-radius: 14px;
+	background-color: rgba(99, 173, 255, 0.25);
+}
+
+.welcome_image {
+	padding-right: 0px;
+	position: relative;
+}
+
+.welcome_image_overlay {
+	position: absolute;
+  	top: 0;
+  	right: 0;
+  	bottom: 0;
+  	left: 0;
+}
+
+.welcome_content {
+	padding-top: 19px;
+	padding-left: 26px;
+}
+
+.welcome_content p {
+	line-height: 1.5;
+	letter-spacing: 1.8px;
+}
+
+.welcome_content h1 {
+	font-size: 18px;
+	letter-spacing: 2.7px;
+	margin-bottom: 12px;
+}
+
+.welcome_icons {
+	float: right;
+}
+
+
+.library_image {
+	border-top-right-radius: 14px;
+	border-bottom-right-radius: 14px;
+	padding-right: 0px;
+	position: relative;
+}
