@@ -60,6 +60,8 @@
 	color: black;
 }
 
+
+
 .bottom_icons {
 	float: right;
 	}
@@ -101,4 +103,145 @@
 
 .subtitle_path_card {
 	color: grey;
+}
+
+//Course Cover Card
+
+.course_cover_card {
+	margin-top: 25px;
+	font-size: 1.2em;
+	min-height: 470px;
+}
+
+.course_cover_card h4 {
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: 2.4px;
+}
+
+.course_cover_card p {
+	font-weight: 500;
+	line-height: 1.67;
+	letter-spacing: 1.8px;
+	color: #fffcfc;
+}
+
+.btn-card-start-black {
+	background-color: #000000;
+	border-color: none;
+	letter-spacing: 1.8px;
+	color: white;
+}
+
+.btn-tag {
+	font-weight: bold;
+	letter-spacing: 1.8px;
+	border: solid 1px #979797;
+	color: black;
+
+}
+
+.btn-tag:hover {
+	font-weight: bold;
+	letter-spacing: 1.8px;
+	border: solid 1px #979797;
+	color: black;
+
+}
+
+.tag_cloud .btn {
+	margin-right: 12px;
+}
+
+.tag_cloud {
+
+	margin-bottom: 21px;
+}
+
+.course_card_description {
+	font-weight: lighter;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.9;
+	letter-spacing: 1.8px;
+
+}
+
+.course_card_header {
+	padding-bottom: 19px;
+	padding-top: 12px;
+}
+
+.course_feature_image {
+
+}
+
+
+//Course Video
+
+.btn-progress {
+	font-weight: bold;
+	background-color: transparent;
+	color: black;
+	border-radius: 45px;
+
+}
+
+.btn-progress:hover {
+	border-color: transparent;
+}
+
+.btn-progress:active {
+	border-color: transparent;
+}
+
+.Course_progress {
+	padding: 20px;
+
+}
+
+.fa-li {
+	display: inline-block;
+	position: relative;
+	margin-left: 40px;
+}
+
+
+
+.course_progress_icon {
+	font-size: 25px;
+}
+
+.progress_line {
+	width: 77px;
+	border: solid 5px #000000;
+}
+
+.video_items li {
+	line-height: 2.33;
+	letter-spacing: 1.8px;
+	color: #000000;
+	font-size: 12px;
+	border-color: transparent;
+}
+
+.nav-tabs .nav-tabs:active{
+	border-color: transparent;
+}
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link .nav-link:hover{
+	border-color: transparent;
+	border-bottom-color: grey;
+}
+
+.video_content {
+	
+}
+
+.tab-pane {
+	padding-top: 30px;
+}
+
+.course_content_heading {
+	margin-bottom: 12px;
 }
