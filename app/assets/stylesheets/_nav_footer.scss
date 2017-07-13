@@ -27,3 +27,23 @@
 
 	border: none;
 }
+
+//nav-tab items in page
+
+.nav-item {
+	margin-left: 6px;
+	font-size: 10px;
+}
+
+.nav-tabs .nav-tabs:active .nav-tabs:hover .nav-tabs:focus {
+	border-color: transparent;
+}
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link .nav-link:hover .nav-tabs:focus {
+	border-color: transparent;
+	border-bottom-color: grey;
+}
+
+.tab-content {
+	padding-bottom: 30px;
+}

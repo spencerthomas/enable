@@ -13,6 +13,10 @@ Rails.application.routes.draw do
   end
   devise_for :users
 
+  #Progresses
+  get    "chapters/read" => "progresses#show"
+  post   "chapters/mark_as_complete" => "progresses#create"
+  delete "chapters/mark_as_incomplete" => "progresses#delete"
   
   
   root 'pages#home'

@@ -1,16 +1,111 @@
-<div class="container">
+<div class="container-fluid">
 	<div class="row">
 
-		<div class="col-lg-12">
-			<p><%= @course.title %> </p>
-			<p><%= @course.title %> </p>
-			<p><%= @course.summary %> </p>
-			<p><%= @course.description %> </p>
-			<p><%= @course.summary_video %> </p>
-			<p><%= @course.thumbnail %> </p>
-			<p><%= @course.feature_image %> </p>
-			<p><%= @course.support_video %> </p>
+		<div class="col-lg-12 align-self-center">
+			<div class="card card-inverse course_cover_card"">
+			<%= image_tag(@course.feature_image, class: "card-img img-fluid course_feature_image") %>
+				<div class="card-img-overlay">
+				<div class="row">
+					<div class="col-md-6 text-center align-self-center hidden-md-down">
+					<i class="fa fa-play-circle play_icon" style="font-size: 88px;"></i>
+					</div>
+					<div class="col-md-6 col-sm-12">
+
+						<div class="card-block">
+				  			<p class="card-subtitle" style="color: 999999; padding-bottom: 10px;">Course</p>
+						    <h4 class="card-title pull-left"><%= @course.title %></h4>
+						    <p class="pull-right">53 Hrs</p>
+						 </div>
+						<div class="card-block">
+						    <div class="progress path_progress">
+							<div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+							</div>
+							</div>
+						</div>
+						<div class="card-block">
+						     <p class="card-text"><%= @course.summary %></p>
+
+						    <a href="#" class="card-link btn btn-card-start-black">START</a>
+							<a href="#" class="card-link btn btn-outline-secondary">LEAVE PATH</a>
+							<a href="#" class="card-link btn btn-outline-secondary">BOOKMARK</a>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
 		</div>
 
 	</div>
+
+	<div class="row">
+	<div class="col-md-12">
+		<div class="tag_cloud" role="group" aria-label="Course tags">
+			<button type="button" class="btn btn-outline-secondary btn-tag pull-left">Ableton</button>
+			<button type="button" class="btn btn-outline-secondary btn-tag pull-left">Beginner</button>
+			<button type="button" class="btn btn-outline-secondary btn-tag pull-right">Bookmark</button>
+		</div>
+	</div>
+</div>
+
+	<br>
+
+<div class="container-fluid">
+	<hr>
+		<div class="row">
+			
+			<div class="col-md-8">
+				
+				<h3 class="course_card_header">About This Course</h3>
+
+				<p class="course_card_description"><%= @course.description %> </p>
+
+				<h3 class="course_card_header">About This Course</h3>
+
+				<div class="embed-responsive embed-responsive-16by9">
+					  <iframe class="embed-responsive-item" src="<%= @course.support_video %>" allowfullscreen></iframe>
+				</div>
+
+			</div>
+	
+			<div class="col-md-4">
+				<div class="row">
+					<div class="col-md-8">
+					<h3 class="course_card_header">Teacher</h3>
+
+					<p class="course_card_description"><strong>Tom Spencer</strong> Tom is an Ableton Certified Trainer and performs under the moniker Spencer Thomas. A DJ, producer and teach Tom has been using and producing with Ableton for 12 years. </p>
+					</div>
+					<div class="col-md-4 align-self-center">
+					<%= image_tag("teacher_thumb.png", class: "img-fluid rounded-circle") %>
+					</div>
+				</div>
+
+			<h3 class="course_card_header">Download Content</h3>
+
+			<p class="course_card_description"> Each course comes with comprehensive Ableton Live sets, sample audio files and teaching notes. You must be on a Pro subscription to download these resources.</p>
+
+			<button type="button" class="btn btn-card-start-black pull-left">DOWNLOAD</button>
+
+			</div>
+
+		</div>
+	</div>
+
+	<div class="row">
+	
+		<div class="col-md-12">
+			<h3 class="course_card_header">What You Will Learn</h3>
+
+				<ul class="fa-ul list-group">
+					<li class="list-group-item">Session and arrangement views</li>
+					<li class="list-group-item">Drum Racks</li>
+					<li class="list-group-item">Using audio effects</li>
+					<li class="list-group-item">Sends and routing</li>
+					<li class="list-group-item">Basic mixing</li>
+				</ul>
+		</div>
+	
+		</div>
+	</div>
+
 </div>
