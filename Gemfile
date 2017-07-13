@@ -11,6 +11,7 @@ gem 'rails', '~> 5.0.2'
 gem 'devise'
 gem 'pg'
 gem 'simple_form'
+gem 'administrate'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets

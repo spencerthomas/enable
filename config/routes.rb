@@ -1,5 +1,17 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    resources :users
+    resources :chapters
+    resources :courses
+
+    root to: "users#index"
+  end
+
+  resources :chapters
   devise_for :users
+
+  resources :courses
+  
   root 'pages#home'
 
   get 'pages/library'

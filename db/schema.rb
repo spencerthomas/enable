@@ -10,10 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170712054746) do
+ActiveRecord::Schema.define(version: 20170713040125) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "chapters", force: :cascade do |t|
+    t.integer  "course_id"
+    t.string   "title"
+    t.string   "description"
+    t.string   "video_url"
+    t.string   "video_time"
+    t.boolean  "completed",   default: false
+    t.text     "notes"
+    t.text     "transcript"
+    t.string   "download"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.index ["created_at"], name: "index_chapters_on_created_at", using: :btree
+  end
+
+  create_table "courses", force: :cascade do |t|
+    t.string   "title"
+    t.text     "summary"
+    t.text     "description"
+    t.string   "summary_video"
+    t.string   "thumbnail"
+    t.string   "feature_image"
+    t.string   "support_video"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
