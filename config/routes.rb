@@ -1,4 +1,5 @@
-Rails.application.routes.draw do
+Rails.application.routes.draw do  
+
   namespace :admin do
     resources :users
     resources :chapters
@@ -7,10 +8,12 @@ Rails.application.routes.draw do
     root to: "users#index"
   end
 
-  resources :chapters
+  resources :courses do
+    resources :chapters
+  end
   devise_for :users
 
-  resources :courses
+  
   
   root 'pages#home'
 

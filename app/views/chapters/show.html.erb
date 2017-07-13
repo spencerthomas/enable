@@ -1,4 +1,81 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
 
-<%= link_to 'Edit', edit_chapter_path(@chapter) %> |
-<%= link_to 'Back', chapters_path %>
+	<div class="row">
+		<div class="col-md-12 text-center">
+				<ul class="Course_progress fa-ul">
+				  <li class="fa-li fa fa-play-circle course_progress_icon"></li>
+				  <li class="fa-li fa fa-play-circle course_progress_icon"></li>
+				  <li class="fa-li fa fa-play-circle course_progress_icon"></li>
+				  <li class="fa-li fa fa-play-circle course_progress_icon"></li>
+				  <li class="fa-li fa fa-play-circle course_progress_icon active"></li>
+				  <li class="fa-li fa fa-play-circle course_progress_icon"></li>
+				  <li class="fa-li fa fa-play-circle course_progress_icon"></li>
+				</ul> 
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12 align-self-center">
+			<div class="card card-inverse course_video">
+				<div class="embed-responsive embed-responsive-16by9">
+  					<iframe class="embed-responsive-item" src="<%= @chapter.video_url %>"  allowfullscreen></iframe>
+					</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+
+<div class="row ">
+		<div class="col-lg-12">
+			<div class="video_content">
+				<h3 class="video_title"><%= @chapter.title %><span class="pull-right"><%= @chapter.video_time %></span></h3>
+				<p class="teacher_name_video">with <strong>Matt Ridgway</strong></p>
+				<p class="video_description"><%= @chapter.description %></p>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+		<!-- Nav tabs -->
+			<ul class="nav nav-tabs video_items" role="tablist">
+				<li class="nav-item">
+				<a class="nav-link active" data-toggle="tab" href="#teaching" role="tab">Notes</a>
+				</li>
+				<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#questions" role="tab">Questions</a>
+				</li>
+				<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#transcript" role="tab">Transcript</a>
+				</li>
+				<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#downloads" role="tab">Downloads</a>
+				</li>
+				<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#collaborate" role="tab">Collaborate</a>
+				</li>
+			</ul>
+
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<div class="tab-pane active" id="teaching" role="tabpanel">
+				<h4 class="course_content_heading">Concepts Covered</h4>
+				<p><%= @chapter.notes %></p>
+				</div>
+				<div class="tab-pane" id="questions" role="tabpanel">...</div>
+				<div class="tab-pane" id="transcript" role="tabpanel">
+					<p><%= @chapter.transcript %></p>
+				</div>
+				<div class="tab-pane" id="downloads" role="tabpanel">
+					<h4 class="course_content_heading">Get the live set</h4>
+					<a href="<%= @chapter.download %>" target="_blank" class="card-link btn btn-card-start-black">DOWNLOAD</a>
+				</div>
+				<div class="tab-pane" id="collaborate" role="tabpanel">...</div>
+			</div>
+		</div>
+	
+	</div>
+</div>
