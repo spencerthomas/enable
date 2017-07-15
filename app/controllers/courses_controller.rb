@@ -8,6 +8,10 @@ class CoursesController < ApplicationController
   	@courses = Course.all
   end
 
+  def index
+    @recent_courses = Course.last(3)
+  end
+
   # GET /users/1
   # GET /users/1.json
 

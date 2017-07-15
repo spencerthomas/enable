@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     resources :users
     resources :chapters
     resources :courses
+    resources :topics
 
     root to: "users#index"
   end
@@ -11,6 +12,7 @@ Rails.application.routes.draw do
   resources :courses do
     resources :chapters
   end
+  resources :topics
   devise_for :users
 
   #Progresses

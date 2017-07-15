@@ -30,4 +30,3 @@ class ProgressesController < ApplicationController
 
 
 end
-end

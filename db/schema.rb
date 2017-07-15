@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170713073231) do
+ActiveRecord::Schema.define(version: 20170714223649) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20170713073231) do
     t.string   "support_video"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.integer  "topic_id"
   end
 
   create_table "progresses", force: :cascade do |t|
@@ -49,6 +50,14 @@ ActiveRecord::Schema.define(version: 20170713073231) do
     t.datetime "updated_at", null: false
     t.index ["chapter_id"], name: "index_progresses_on_chapter_id", using: :btree
     t.index ["user_id"], name: "index_progresses_on_user_id", using: :btree
+  end
+
+  create_table "topics", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "image"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "users", force: :cascade do |t|
