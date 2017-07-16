@@ -39,8 +39,6 @@
 		<% @recent_courses.each do |course| %>
 		<div class="col-md-4">
 				  <div class="card">
-
-				  	<%=  %>
 				    <%= image_tag(course.thumbnail, class: "card-img-top img-fluid") %>
 				      <div class="card-img-overlay">
 				        <div class="progress_card">
@@ -53,11 +51,12 @@
 				        </div>
 					  </div>
 				    <div class="card-block">
-				      <h4 class="card-title">Ableton</h4>
-				      <p class="card-text">Learn the essetnails of this powerful DAW. Discover your creative partner for creation, production and performance with this comprehensive path.</p>
+				      <h4 class="card-title"><%= course.title %></h4>
+				      <p class="card-text"><%= course.summary %></p>
+
 				    </div>
 				    <div class="card-footer">
-				      <a href="#" class="btn btn-card-resume">RESUME</a>
+				      <%= link_to  "RESUME", course_path(course.id), class: "btn btn btn-card-resume card-link" %>
 				      <span class="bottom_icons">
 					      <i class="fa fa-info-circle fa-2x bottom_font_icon"></i>
 					      <i class="fa fa-play-circle fa-2x bottom_font_icon"></i>
@@ -67,60 +66,6 @@
 		</div>
 
 		<% end %>
-
-            <div class="col-md-4">
-				  <div class="card">
-				    <%= image_tag("production.png", class: "card-img-top img-fluid") %>
-				      <div class="card-img-overlay">
-				        <div class="progress_card">
-				        	<i class="fa fa-circle progress_card"></i>
-				        	<i class="fa fa-circle progress_card"></i>
-				        	<i class="fa fa-circle-thin progress_card"></i>
-				        	<i class="fa fa-circle-thin progress_card"></i>
-				        	<i class="fa fa-circle-thin progress_card"></i>
-				        	<p class="card-text" style="float: right;">112 hrs.</p>
-				        </div>
-					  </div>
-				    <div class="card-block">
-				      <h4 class="card-title">Production</h4>
-				      <p class="card-text">Create the music you dream of with this comprehensive producer path. Learn the techniques that will set your music apart.</p>
-				    </div>
-				    <div class="card-footer">
-				      <a href="#" class="btn btn-card-start">START</a>
-				      <span class="bottom_icons">
-					      <i class="fa fa-info-circle fa-2x bottom_font_icon"></i>
-					      <i class="fa fa-play-circle fa-2x bottom_font_icon"></i>
-					  </span>
-				    </div>
-				 </div>
-			 </div>
-            <div class="col-md-4">
-				  <div class="card">
-				    <%= image_tag("remix.png", class: "card-img-top img-fluid") %>
-				      <div class="card-img-overlay">
-				        <div class="progress_card">
-				        	<i class="fa fa-circle-thin progress_card"></i>
-				        	<i class="fa fa-circle-thin progress_card"></i>
-				        	<i class="fa fa-circle-thin progress_card"></i>
-				        	<i class="fa fa-circle-thin progress_card"></i>
-				        	<i class="fa fa-circle-thin progress_card"></i>
-				        	<p class="card-text" style="float: right;">64 hrs.</p>
-				        </div>
-					  </div>
-				    <div class="card-block">
-				      <h4 class="card-title">Remix</h4>
-				      <p class="card-text">Learn the art and craft of remixing. Apply your production skills to recreating music based on stems and whole tracks, creating rich remixes with Live.</p>
-				    </div>
-				    <div class="card-footer">
-				      <a href="#" class="btn btn-card-start">START</a>
-				      <span class="bottom_icons">
-					      <i class="fa fa-info-circle fa-2x bottom_font_icon"></i>
-					      <i class="fa fa-play-circle fa-2x bottom_font_icon"></i>
-					  </span>
-				    </div>
-				 </div>
-			 </div>
-
 	</div>
 
 	<div class="row">
@@ -347,23 +292,3 @@
 
 
 
-
-<div class="container">
-	<div class="row">
-
-		<div class="col-lg-12">
-			<% @recent_courses.each do |course| %>
-
-			<p><%= course.title %> </p>
-			<p><%= course.title %> </p>
-			<p><%= course.summary %> </p>
-			<p><%= course.description %> </p>
-			<p><%= course.summary_video %> </p>
-			<p><%= course.thumbnail %> </p>
-			<p><%= course.feature_image %> </p>
-			<p><%= course.support_video %> </p>
-			<% end %>
-		</div>
-
-	</div>
-</div>
