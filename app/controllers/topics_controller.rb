@@ -1,11 +1,10 @@
-class TopicController < ApplicationController
-
 class TopicsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_topic, only: [:show, :edit, :update, :destroy]
 
   # GET /topics
   # GET /topics.json
+
   def index
     @topics = Topic.all
   end
@@ -66,15 +65,13 @@ class TopicsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_
+    def set_topic
       @topic = Topic.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def topic_params
-      params.fetch(:topic, {})
+      params.fetch(:topic.require(:title, :description, :image))
     end
 end
 
-
-end

@@ -1,0 +1,20 @@
+
+<div class="container-fluid">
+	<div class="row">
+
+		<% @topics.each do |topic| %>
+
+		<div class="col-sm-3">
+
+		<%= image_tag("Live_audio.png", class: "card-img-top img-fluid") %>
+			<div class="card topic_card card-inverse">
+				<div class="card-img-overlay">
+				<h4 class="card-title"><%= topic.title %></h4>
+				</div>
+			</div>
+		</div>
+
+		<% end %>
+
+	</div>
+</div>

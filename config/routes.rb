@@ -20,10 +20,16 @@ Rails.application.routes.draw do
   post   "chapters/mark_as_complete" => "progresses#create"
   delete "chapters/mark_as_incomplete" => "progresses#delete"
   
-  
+  #Subscriptions
+  post    "/subscriptions" => "subscriptions#create"
+  put     "/subscriptions" => "subscriptions#update"
+  delete  "/subscriptions" => "subscriptions#delete"
+
   root 'pages#home'
 
   get 'pages/library'
+
+  get 'pages/subscriptions'
 
   get 'pages/path'
 

@@ -251,3 +251,28 @@
 
 //Login card
 
+//Subscription card
+
+.plan_card {
+	height: 430px;
+	margin-top: 25px;
+}
+
+.table_plans {
+	border-radius: 11px;
+	background-color: #f0fffc;
+	box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.08);
+	font-size: 12px;
+}
+
+tr {
+	padding-right: 20px;
+}
+
+th:last-child,
+td:last-child,
+th:nth-last-child(3),
+td:nth-last-child(3) {
+    text-align: right;
+}
+
