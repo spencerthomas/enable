@@ -21,9 +21,7 @@ Rails.application.routes.draw do
   delete "chapters/mark_as_incomplete" => "progresses#delete"
   
   #Subscriptions
-  post    "/subscriptions" => "subscriptions#create"
-  put     "/subscriptions" => "subscriptions#update"
-  delete  "/subscriptions" => "subscriptions#delete"
+  resources :charges
 
   root 'pages#home'
 

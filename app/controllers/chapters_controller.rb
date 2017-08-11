@@ -70,6 +70,7 @@ class ChaptersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def chapter_params
-      params.fetch(:chapter, {})
+      params.require(:chapter.permit(:course_id, :title, :description, :video_url, :video_time, :completed, :notes, :transcript, :download))
     end
 end
+
