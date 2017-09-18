@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   #Subscriptions
   resources :charges
 
-  root 'pages#home'
+  root 'courses#index'
 
   get 'pages/library'
 
@@ -33,7 +33,7 @@ Rails.application.routes.draw do
 
   get 'pages/path_cover'
 
-  get 'pages/course_cover'
+  get 'pages/chapter_cover'
 
   get 'pages/course_video'
 

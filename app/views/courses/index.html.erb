@@ -36,36 +36,8 @@
 			<p>Here are some courses and videos you may find helpful.</p>
 		</div>
 
-		<% @recent_courses.each do |course| %>
-		<div class="col-md-4">
-				  <div class="card">
-				    <%= image_tag(course.thumbnail, class: "card-img-top img-fluid") %>
-				      <div class="card-img-overlay">
-				        <div class="progress_card">
-				        	<i class="fa fa-circle progress_card"></i>
-				        	<i class="fa fa-circle progress_card"></i>
-				        	<i class="fa fa-circle-thin progress_card"></i>
-				        	<i class="fa fa-circle-thin progress_card"></i>
-				        	<i class="fa fa-circle-thin progress_card"></i>
-				        	<p class="card-text" style="float: right;">52 hrs.</p>
-				        </div>
-					  </div>
-				    <div class="card-block">
-				      <h4 class="card-title"><%= course.title %></h4>
-				      <p class="card-text"><%= course.summary %></p>
+		<%= render 'courses/recent_course' %>
 
-				    </div>
-				    <div class="card-footer">
-				      <%= link_to  "RESUME", course_path(course.id), class: "btn btn btn-card-resume card-link" %>
-				      <span class="bottom_icons">
-					      <i class="fa fa-info-circle fa-2x bottom_font_icon"></i>
-					      <i class="fa fa-play-circle fa-2x bottom_font_icon"></i>
-					  </span>
-				    </div>
-				 </div>
-		</div>
-
-		<% end %>
 	</div>
 
 	<div class="row">
@@ -75,85 +47,7 @@
 			
 		</div>
 
-		<div class="col-md-4">
-				  <div class="card">
-				    <%= image_tag("Push.png", class: "card-img-top img-fluid") %>
-				      <div class="card-img-overlay">
-				        <div class="progress_card">
-				        	<i class="fa fa-circle progress_card"></i>
-				        	<i class="fa fa-circle progress_card"></i>
-				        	<i class="fa fa-circle-thin progress_card"></i>
-				        	<i class="fa fa-circle-thin progress_card"></i>
-				        	<i class="fa fa-circle-thin progress_card"></i>
-				        	<p class="card-text" style="float: right;">52 hrs.</p>
-				        </div>
-					  </div>
-				    <div class="card-block">
-				      <h4 class="card-title">Ableton</h4>
-				      <p class="card-text">Learn the essetnails of this powerful DAW. Discover your creative partner for creation, production and performance with this comprehensive path.</p>
-				    </div>
-				    <div class="card-footer">
-				      <a href="#" class="btn btn-card-resume">RESUME</a>
-				      <span class="bottom_icons">
-					      <i class="fa fa-info-circle fa-2x bottom_font_icon"></i>
-					      <i class="fa fa-play-circle fa-2x bottom_font_icon"></i>
-					  </span>
-				    </div>
-				 </div>
-			 </div>
-            <div class="col-md-4">
-				  <div class="card">
-				    <%= image_tag("production.png", class: "card-img-top img-fluid") %>
-				      <div class="card-img-overlay">
-				        <div class="progress_card">
-				        	<i class="fa fa-circle progress_card"></i>
-				        	<i class="fa fa-circle progress_card"></i>
-				        	<i class="fa fa-circle-thin progress_card"></i>
-				        	<i class="fa fa-circle-thin progress_card"></i>
-				        	<i class="fa fa-circle-thin progress_card"></i>
-				        	<p class="card-text" style="float: right;">112 hrs.</p>
-				        </div>
-					  </div>
-				    <div class="card-block">
-				      <h4 class="card-title">Production</h4>
-				      <p class="card-text">Create the music you dream of with this comprehensive producer path. Learn the techniques that will set your music apart.</p>
-				    </div>
-				    <div class="card-footer">
-				      <a href="#" class="btn btn-card-start">START</a>
-				      <span class="bottom_icons">
-					      <i class="fa fa-info-circle fa-2x bottom_font_icon"></i>
-					      <i class="fa fa-play-circle fa-2x bottom_font_icon"></i>
-					  </span>
-				    </div>
-				 </div>
-			 </div>
-            <div class="col-md-4">
-				  <div class="card">
-				    <%= image_tag("remix.png", class: "card-img-top img-fluid") %>
-				      <div class="card-img-overlay">
-				        <div class="progress_card">
-				        	<i class="fa fa-circle-thin progress_card"></i>
-				        	<i class="fa fa-circle-thin progress_card"></i>
-				        	<i class="fa fa-circle-thin progress_card"></i>
-				        	<i class="fa fa-circle-thin progress_card"></i>
-				        	<i class="fa fa-circle-thin progress_card"></i>
-				        	<p class="card-text" style="float: right;">64 hrs.</p>
-				        </div>
-					  </div>
-				    <div class="card-block">
-				      <h4 class="card-title">Remix</h4>
-				      <p class="card-text">Learn the art and craft of remixing. Apply your production skills to recreating music based on stems and whole tracks, creating rich remixes with Live.</p>
-				    </div>
-				    <div class="card-footer">
-				      <a href="#" class="btn btn-card-start">START</a>
-				      <span class="bottom_icons">
-					      <i class="fa fa-info-circle fa-2x bottom_font_icon"></i>
-					      <i class="fa fa-play-circle fa-2x bottom_font_icon"></i>
-					  </span>
-				    </div>
-				 </div>
-			 </div>
-		
+		<%= render 'courses/course' %>
 	</div>
 
 	<hr>
@@ -167,108 +61,32 @@
 
 	<div class="row">
 	
+	<% @topic.each do |topic| %>
 
 		<div class="col-sm-3">
-			<div class="card topic_card card-inverse">
-	
-				<div class="card-img-overlay">
-				<h4 class="card-title"></h4>
+		<div class="topic_card">
+			<%= image_tag(topic.image, class: "card-img-top img-fluid") %>
+				<div class="card topic_card card-inverse">
+					<div class="card-img-overlay">
+					<h4 class="card-title"><%= topic.title %></h4>
+					</div>
 				</div>
 			</div>
 		</div>
 
-
-
+	<% end %>
 
 	</div>
 
-		<div class="row">
+	<hr>
+
+	<div class="row">
 		<div class="col-lg-12">
 			<h3>Workshops</h3>
 			<p>Technique focused presentations and talks.<button type="button" class="btn btn-outline-primary pull-right">View All <span class="badge badge-default badge-pill">148</span></button></p>
-			
 		</div>
 
-		<div class="col-md-4">
-				  <div class="card">
-				    <%= image_tag("Push.png", class: "card-img-top img-fluid") %>
-				      <div class="card-img-overlay">
-				        <div class="progress_card">
-				        	<i class="fa fa-circle progress_card"></i>
-				        	<i class="fa fa-circle progress_card"></i>
-				        	<i class="fa fa-circle-thin progress_card"></i>
-				        	<i class="fa fa-circle-thin progress_card"></i>
-				        	<i class="fa fa-circle-thin progress_card"></i>
-				        	<p class="card-text" style="float: right;">52 hrs.</p>
-				        </div>
-					  </div>
-				    <div class="card-block">
-				      <h4 class="card-title">Ableton</h4>
-				      <p class="card-text">Learn the essetnails of this powerful DAW. Discover your creative partner for creation, production and performance with this comprehensive path.</p>
-				    </div>
-				    <div class="card-footer">
-				      <a href="#" class="btn btn-card-resume">RESUME</a>
-				      <span class="bottom_icons">
-					      <i class="fa fa-info-circle fa-2x bottom_font_icon"></i>
-					      <i class="fa fa-play-circle fa-2x bottom_font_icon"></i>
-					  </span>
-				    </div>
-				 </div>
-			 </div>
-            <div class="col-md-4">
-				  <div class="card">
-				    <%= image_tag("production.png", class: "card-img-top img-fluid") %>
-				      <div class="card-img-overlay">
-				        <div class="progress_card">
-				        	<i class="fa fa-circle progress_card"></i>
-				        	<i class="fa fa-circle progress_card"></i>
-				        	<i class="fa fa-circle-thin progress_card"></i>
-				        	<i class="fa fa-circle-thin progress_card"></i>
-				        	<i class="fa fa-circle-thin progress_card"></i>
-				        	<p class="card-text" style="float: right;">112 hrs.</p>
-				        </div>
-					  </div>
-				    <div class="card-block">
-				      <h4 class="card-title">Production</h4>
-				      <p class="card-text">Create the music you dream of with this comprehensive producer path. Learn the techniques that will set your music apart.</p>
-				    </div>
-				    <div class="card-footer">
-				      <a href="#" class="btn btn-card-start">START</a>
-				      <span class="bottom_icons">
-					      <i class="fa fa-info-circle fa-2x bottom_font_icon"></i>
-					      <i class="fa fa-play-circle fa-2x bottom_font_icon"></i>
-					  </span>
-				    </div>
-				 </div>
-			 </div>
-            <div class="col-md-4">
-				  <div class="card">
-				    <%= image_tag("remix.png", class: "card-img-top img-fluid") %>
-				      <div class="card-img-overlay">
-				        <div class="progress_card">
-				        	<i class="fa fa-circle-thin progress_card"></i>
-				        	<i class="fa fa-circle-thin progress_card"></i>
-				        	<i class="fa fa-circle-thin progress_card"></i>
-				        	<i class="fa fa-circle-thin progress_card"></i>
-				        	<i class="fa fa-circle-thin progress_card"></i>
-				        	<p class="card-text" style="float: right;">64 hrs.</p>
-				        </div>
-					  </div>
-				    <div class="card-block">
-				      <h4 class="card-title">Remix</h4>
-				      <p class="card-text">Learn the art and craft of remixing. Apply your production skills to recreating music based on stems and whole tracks, creating rich remixes with Live.</p>
-				    </div>
-				    <div class="card-footer">
-				      <a href="#" class="btn btn-card-start">START</a>
-				      <span class="bottom_icons">
-					      <i class="fa fa-info-circle fa-2x bottom_font_icon"></i>
-					      <i class="fa fa-play-circle fa-2x bottom_font_icon"></i>
-					  </span>
-				    </div>
-				 </div>
-			 </div>
-		
+	<%= render 'courses/course' %>
 	</div>
-
 
 

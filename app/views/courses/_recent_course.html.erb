@@ -1,0 +1,29 @@
+		<% @recent_courses.each do |course| %>
+		<div class="col-md-4">
+				  <div class="card">
+				    <%= image_tag(course.thumbnail, class: "card-img-top img-fluid") %>
+				      <div class="card-img-overlay">
+				        <div class="progress_card">
+				        	<i class="fa fa-circle progress_card"></i>
+				        	<i class="fa fa-circle progress_card"></i>
+				        	<i class="fa fa-circle-thin progress_card"></i>
+				        	<i class="fa fa-circle-thin progress_card"></i>
+				        	<i class="fa fa-circle-thin progress_card"></i>
+				        	<p class="card-text" style="float: right;">52 hrs.</p>
+				        </div>
+					  </div>
+				    <div class="card-block">
+				      <h4 class="card-title"><%= course.title %></h4>
+				      <p class="card-text"><%= truncate(course.summary, length: 200, separator: ".") %></p>
+
+				    </div>
+				    <div class="card-footer">
+				      <%= link_to  "RESUME", course_path(course.id), class: "btn btn btn-card-resume card-link" %>
+				      <span class="bottom_icons">
+					      <i class="fa fa-info-circle fa-2x bottom_font_icon"></i>
+					      <i class="fa fa-play-circle fa-2x bottom_font_icon"></i>
+					  </span>
+				    </div>
+				 </div>
+		</div>
+<% end %>

@@ -6,9 +6,7 @@ class CoursesController < ApplicationController
 
   def index
   	@courses = Course.all
-  end
-
-  def index
+    @topic = Topic.all
     @recent_courses = Course.last(3)
   end
 
