@@ -14,6 +14,8 @@ gem 'simple_form'
 gem 'administrate'
 gem 'stripe'
 gem 'figaro'
+gem 'acts-as-taggable-on'
+gem 'pg_search'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.0'

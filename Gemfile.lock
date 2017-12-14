@@ -38,6 +38,8 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    acts-as-taggable-on (5.0.0)
+      activerecord (>= 4.2.8)
     administrate (0.7.0)
       actionpack (>= 4.2, < 5.1)
       actionview (>= 4.2, < 5.1)
@@ -130,6 +132,10 @@ GEM
     normalize-rails (4.1.1)
     orm_adapter (0.5.0)
     pg (0.21.0)
+    pg_search (2.1.1)
+      activerecord (>= 4.2)
+      activesupport (>= 4.2)
+      arel (>= 6)
     popper_js (1.9.9)
     puma (3.9.1)
     rack (2.0.3)
@@ -219,6 +225,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts-as-taggable-on
   administrate
   bootstrap
   byebug
@@ -230,6 +237,7 @@ DEPENDENCIES
   jquery-rails
   listen (~> 3.0.5)
   pg
+  pg_search
   popper_js (~> 1.9.9)
   puma (~> 3.0)
   rails (~> 5.0.2)
@@ -244,4 +252,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.15.3
+   1.16.0.pre.3

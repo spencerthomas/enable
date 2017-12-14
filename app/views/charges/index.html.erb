@@ -1,0 +1,156 @@
+<div class="container-fluid">
+	<div class="row">
+
+		<div class="col-md-4">
+			<div class="card plan_card">
+						<div class="card-block text-center">
+						<h4 class="card-title">BASIC</h4>
+						</div>
+						<div class="card-block text-center">
+						<h4>$20/m</h4>
+						<br>
+						<h6 class="card-subtitle mb-2 text-muted">Our starter plan for every producer</h6>
+						</div>
+						<div class="card-block text-center">
+							<%= link_to "Subscribe", charge_path, method: :post, subscription: "yes", class: "btn btn-primary"%>
+						</div>
+					
+			</div>
+			
+		</div>
+
+		<div class="col-md-4">
+			<div class="card plan_card">
+						<div class="card-block text-center">
+						<h4 class="card-title">PRO</h4>
+						</div>
+						<div class="card-block text-center">
+						<h4>$49/m</h4>
+						<br>
+						<h6 class="card-subtitle mb-2 text-muted">Our premium plan for dedicated producers</h6>
+						</div>
+						<div class="card-block text-center">
+							<a href="#" class="btn btn-disabled">Coming Soon</a>
+						</div>
+					
+			</div>
+			
+		</div>
+
+		<div class="col-md-4">
+			<div class="card plan_card">
+						<div class="card-block text-center">
+						<h4 class="card-title">Music Degree</h4>
+						</div>
+						<div class="card-block text-center">
+						<h4>$200/m</h4>
+						<br>
+						<h6 class="card-subtitle mb-2 text-muted">Dedicated mentor and in-depth materials.</h6>
+						</div>
+						<div class="card-block text-center">
+							<a href="#" class="btn btn-disabled">Coming Soon</a>
+						</div>
+					
+			</div>
+			
+		</div>
+
+	</div>
+
+	<div class="row">
+		<div class="col-md-8">
+				<table class="table table-responsive table_plans">
+				<thead>
+		    <tr>
+		      <th>Features</th>
+		      <th>Music Degree</th>
+		      <th>PRO</th>
+		      <th>BASIC</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <th>A portfolio of 12 tracks or music projects, graded and with personalized feedback.</th>
+		   		<td class="text-center"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+		   		<td class="text-center"><i class="fa fa-times-circle" aria-hidden="true"></i></td>
+		   		<td class="text-center"><i class="fa fa-times-circle" aria-hidden="true"></i></td>
+		    </tr>
+		    <tr>
+		      <td>Step-by-step guided curriculum that guides you through the skills you need.</td>
+		      <td class="text-center"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+		   		<td class="text-center"><i class="fa fa-times-circle" aria-hidden="true"></i></td>
+		   		<td class="text-center"><i class="fa fa-times-circle" aria-hidden="true"></i></td>
+		    </tr>
+		    <tr>
+		      <td>Exclusive access to our Enable Slack channel</td>
+		      <td class="text-center"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+		   		<td class="text-center"><i class="fa fa-times-circle" aria-hidden="true"></i></td>
+		   		<td class="text-center"><i class="fa fa-times-circle" aria-hidden="true"></i></td>
+		    </tr>
+		     <tr>
+		      <td>A final exam to test and verify your knowledge</td>
+		      <td class="text-center"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+		   		<td class="text-center"><i class="fa fa-times-circle" aria-hidden="true"></i></td>
+		   		<td class="text-center"><i class="fa fa-times-circle" aria-hidden="true"></i></td>
+		    </tr>
+		     <tr>
+		      <td>Enable Certification to showcase on your CV</td>
+		      <td class="text-center"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+		   		<td class="text-center"><i class="fa fa-times-circle" aria-hidden="true"></i></td>
+		   		<td class="text-center"><i class="fa fa-times-circle" aria-hidden="true"></i></td>
+		    </tr>
+		     <tr>
+		      <td>Live Set Download</td>
+		      <td class="text-center"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+		   		<td class="text-center"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+		   		<td class="text-center"><i class="fa fa-times-circle" aria-hidden="true"></i></td>
+
+		    </tr>
+		     <tr>
+		      <td>Conference videos &amp; bonus content</td>
+		      <td class="text-center"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+		   		<td class="text-center"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+		   		<td class="text-center"><i class="fa fa-times-circle" aria-hidden="true"></i></td>
+		    </tr>
+		    <tr>
+		      <td>Access to 1,000+ course videos and projects created by industry pros</td>
+		      <td class="text-center"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+		   		<td class="text-center"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+		   		<td class="text-center"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+		    </tr>
+		    <tr>
+		      <td>Practice in real time with our Live sets</td>
+		      <td class="text-center"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+		   		<td class="text-center"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+		   		<td class="text-center"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+		    </tr>
+		    <tr>
+		      <td>Treehouse Community membership</td>
+		      <td class="text-center"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+		   		<td class="text-center"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+		   		<td class="text-center"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+		    </tr>
+		    <tr>
+		      <td>Workshops created by industry experts</td>
+		      <td class="text-center"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+		   		<td class="text-center"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+		   		<td class="text-center"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+		    </tr>
+		     <tr>
+		      <td>Learn at your own pace, from anywhere you have an Internet connection</td>
+		      <td class="text-center"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+		   		<td class="text-center"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+		   		<td class="text-center"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+		    </tr>
+		      <td></td>
+		      <td class="text-center">$200/m</td>
+		      <td class="text-center">$49/m</td>
+		      <td class="text-center">$20/m</td>
+		    </tr>
+
+		  </tbody>
+			</table>
+
+		</div>
+	</div>
+</div>

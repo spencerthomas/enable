@@ -2,6 +2,12 @@
 
 	<div class="row">
 		<div class="col-md-12 text-center justify-content-center">
+		<% @course_chapters.each do |chapter| %>
+
+				<ul class="Course_progress text-center fa-ul">
+				  <li><%= chapter.title %></li>
+				</ul>
+		<% end %>
 				<ul class="Course_progress text-center fa-ul">
 				  <li class="fa-li fa fa-play-circle course_progress_icon"></li>
 				  <li class="fa-li fa fa-play-circle course_progress_icon"></li>

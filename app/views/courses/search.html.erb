@@ -1,0 +1,36 @@
+<h1>Search</h1>
+
+<section class="search-form">
+	<%= simple_form_for @courses, method: :get do |f| %>
+
+	<div class="input-group input-group-lg">
+		<%= label_tag :keywords, nil, class: "sr-only" %>
+		<%= text_field_tag :keywords, nil, placeholder: "First Name, Last Name, or Email address", class: "form-control input-lg" %>
+		<span class="input-group-btn">
+			<%= submit_tag "Find course", class: "btn btn-primary btn-lg" %>
+		</span>
+	</div>
+
+<% end %>
+
+</section>
+
+
+<section class="search-results">
+	<h1>Results</h1>
+
+	<table class="table table-striped">
+		<thead> 
+			<tr>
+			<th>Title</th>
+			<th>Description</th>
+		</tr>
+		</thead>	
+		<tbody>
+			<% @course.each do |course| %>
+			<tr>
+				<td><%= course.title %></td>
+				<td><%= course.description %></td>
+			</tr>
+	</table>
+</section>

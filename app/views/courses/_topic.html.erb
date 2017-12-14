@@ -1,0 +1,13 @@
+<% @topic.each do |topic| %>
+
+<div class="col-sm-3">
+	<div class="card card-inverse topic_card">
+		<%= image_tag(topic.image, class: "card-img card-img-top img-fluid") %>
+			
+			<div class="card-img-overlay">
+				<h4 class="card-title"><%= topic.title %></h4>
+			</div>
+	</div>
+</div>
+
+<% end %>

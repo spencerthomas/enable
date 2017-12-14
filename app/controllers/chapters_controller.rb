@@ -11,6 +11,7 @@ class ChaptersController < ApplicationController
   # GET /chapters/1
   # GET /chapters/1.json
   def show
+    
   end
 
   # GET /chapters/new

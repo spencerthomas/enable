@@ -6,7 +6,7 @@ class ProgressesController < ApplicationController
     progresses = Progress.where(user_id: current_user.id).map(&:chapter_id)
     course_chapters = Course.find(params[:course_id]).chapters
     completed_chapters = Course.find(params[:course_id]).chapters.where(id: progresses)
-    completed_chapters = completed_chapters.each{|c| c.completed = true}
+    completed_chapters = completed_chapters.each { |c| c.completed = true }
     chapters = course_chapters - course_chapters.where(id: progresses)
     final = chapters + completed_chapters
     render json: final.sort_by!(&:id)

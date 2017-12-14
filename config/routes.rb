@@ -1,10 +1,13 @@
 Rails.application.routes.draw do  
 
+  get 'search/index'
+
   namespace :admin do
     resources :users
     resources :chapters
     resources :courses
     resources :topics
+    resources :paths
 
     root to: "users#index"
   end
@@ -13,7 +16,14 @@ Rails.application.routes.draw do
     resources :chapters
   end
   resources :topics
+  resources :paths
   devise_for :users
+
+  # course search
+
+  get "course/index2" => "course#index2"
+
+  get   "course/search" => "course#search"
 
   #Progresses
   get    "chapters/read" => "progresses#show"

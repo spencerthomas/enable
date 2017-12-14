@@ -4,10 +4,9 @@
   </button>
   <a class="navbar-brand" href="#">ENABLE</a>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <a class="nav-item nav-link active" href="#">Paths <span class="sr-only">(current)</span></a>
+      <a><%= link_to "Paths", paths_path, class: "nav-item nav-link" %></a>
       <a><%= link_to "Library", courses_path, class: "nav-item nav-link" %></a>
-      <a class="nav-item nav-link" href="#">Community</a>
-      <a class="nav-item nav-link" href="#">Support</a>
+      <a><%= link_to "Topics", topics_path, class: "nav-link nav-item" %></a>
       <% if user_signed_in? %>
       <%= link_to "Account", edit_user_registration_path, class: "nav-link nav-item" %>
       <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "nav-link nav-item" %>

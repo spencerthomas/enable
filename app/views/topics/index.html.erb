@@ -1,22 +1,8 @@
 <div class="container-fluid">
 	<div class="row">
 
-		<% @topics.each do |topic| %>
-
-		<div class="col-sm-3">
-		<div class="topic_card">
-			<%= image_tag(topic.image, class: "card-img-top img-fluid") %>
-				<div class="card topic_card card-inverse">
-					<div class="card-img-overlay">
-					<h4 class="card-title"><%= topic.title %></h4>
-					</div>
-				</div>
-			</div>
-		</div>
-		<% end %>
-
+		<%= render "topics/topic" %>
+	
 	</div>
-
-
 
 </div>

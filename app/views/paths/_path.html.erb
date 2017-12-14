@@ -1,0 +1,31 @@
+ <% @paths.each do |path| %>
+  
+  <div class="col-md-4">
+          <div class="card">
+            <%= image_tag(path.cover_image, class: "card-img-top img-fluid") %>
+              <div class="card-img-overlay">
+                <div class="progress_card">
+                  <i class="fa fa-circle progress_card"></i>
+                  <i class="fa fa-circle progress_card"></i>
+                  <i class="fa fa-circle-thin progress_card"></i>
+                  <i class="fa fa-circle-thin progress_card"></i>
+                  <i class="fa fa-circle-thin progress_card"></i>
+                  <p class="card-text" style="float: right;"><%= path.length %></p>
+                </div>
+            </div>
+            <div class="card-block">
+              <h4 class="card-title"><%= path.title %></h4>
+              <p class="card-text"><%= truncate(path.description, length: 200, separator: ".") %></p>
+
+            </div>
+            <div class="card-footer">
+              <%= link_to  "LEARN", path_path(path.id), class: "btn btn btn-card-start card-link" %>
+              <span class="bottom_icons">
+                <i class="fa fa-info-circle fa-2x bottom_font_icon"></i>
+                <i class="fa fa-play-circle fa-2x bottom_font_icon"></i>
+            </span>
+            </div>
+         </div>
+    </div>
+    
+<% end %>

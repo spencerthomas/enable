@@ -24,7 +24,6 @@
 						</div>
 						<div class="card-block">
 						     <p class="card-text"><%= @course.summary %></p>
-
 						    <a href="#" class="card-link btn btn-card-start-black">START</a>
 							<a href="#" class="card-link btn btn-outline-secondary">LEAVE PATH</a>
 							<a href="#" class="card-link btn btn-outline-secondary">BOOKMARK</a>
@@ -95,13 +94,10 @@
 	
 		<div class="col-md-12">
 			<h3 class="course_card_header">What You Will Learn</h3>
-
 				<ul class="fa-ul list-group">
-					<li class="list-group-item">Session and arrangement views</li>
-					<li class="list-group-item">Drum Racks</li>
-					<li class="list-group-item">Using audio effects</li>
-					<li class="list-group-item">Sends and routing</li>
-					<li class="list-group-item">Basic mixing</li>
+				<% @chapters.each do |chapters| %>
+					<li class="list-group-item"><%= chapters.title %></li>
+				<% end %>
 				</ul>
 		</div>
 	
