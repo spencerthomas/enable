@@ -1,8 +1,8 @@
 <div class="container-fluid">
   <div class="row path_row">
   
-    <div class="col-md-6">
-        <div class="card">
+    <div class="col-md-6 float-left">
+        <div class="card  ">
           <div class="card-block">
             <p class="card-subtitle" style="color: 999999; padding-bottom: 10px;">Path</p>
             <h4 class="card-title pull-left"><%= @path.title %></h4>
@@ -17,14 +17,13 @@
         <div class="card-block">
              <p class="card-text"><%= @path.long_description %></p>
 
-            <a href="#" class="card-link btn btn-card-start">START</a>
-            <a href="#" class="card-link btn btn-outline-info">LEAVE PATH</a>
-
+            <%= link_to "START", paths_path(@path[:id]), class: "card-link btn btn-card-start" %>
+            <%= link_to "LEAVE",  paths_path, class: "card-link btn btn-outline-info" %>
         </div>
       </div>
     </div>
 
-    <div class="col-md-6">
+    <div class="col-md-6 float-right">
         <%= render "paths/course" %>
     </div>
     

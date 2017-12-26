@@ -5,13 +5,15 @@ class ChaptersController < ApplicationController
   # GET /chapters
   # GET /chapters.json
   def index
+    @course = Course.find(params[:course_id])
     @chapters = Chapter.all
   end
 
   # GET /chapters/1
   # GET /chapters/1.json
   def show
-    
+    @chapter = Chapter.find(params[:id])
+    @course_chapters = Chapter.where({ course_id: "#{@chapter.course_id}"})
   end
 
   # GET /chapters/new

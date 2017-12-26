@@ -8,6 +8,7 @@ class CoursesController < ApplicationController
   	@courses = Course.all
     @topic = Topic.all
     @recent_courses = Course.last(3)
+    @workshops = Course.joins(:topic).merge(Topic.where(:title => "workshops"))
   end
 
   # GET /users/1
@@ -15,7 +16,7 @@ class CoursesController < ApplicationController
 
   def show
     @course = Course.find(params[:id])
-    @chapters = @course.chapters
+    @chapters = @course.chapters.all
   end
 
   # GET /users/new
