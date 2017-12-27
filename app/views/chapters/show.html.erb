@@ -4,7 +4,7 @@
 		<div class="col-md-12 text-center justify-content-center">			
 			<ul class="Course_progress text-center fa-ul">
 				<% @course_chapters.each do |chapter| %>
-				  <%= link_to " ", course_chapter_path( {:id => chapter.id } ), class: "fa-li fa fa-play-circle course_progress_icon"%>
+				  <%= link_to " ", course_chapter_path( { :id => chapter.id } ), class: "fa-li fa fa-play-circle course_progress_icon"%>
 				 <% end %>
 				</ul> 
 			</div>

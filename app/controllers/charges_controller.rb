@@ -36,4 +36,5 @@ class ChargesController < ApplicationController
 		def set_plan
 			@plan = 1
 		end
+	end
 end

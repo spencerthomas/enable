@@ -13,6 +13,7 @@ class TopicsController < ApplicationController
   # GET /topics/1.json
   def show
     @topic = Topic.find(params[:id])
+    @course_topics = @topic.courses.all
   end
 
   # GET /topics/new
