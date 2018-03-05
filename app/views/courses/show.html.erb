@@ -2,7 +2,7 @@
 	<div class="row">
 
 		<div class="col-lg-12 align-self-center">
-			<div class="card card-inverse course_cover_card"">
+			<div class="card card-inverse course_cover_card">
 			<%= image_tag(@course.feature_image, class: "card-img img-fluid course_feature_image") %>
 				<div class="card-img-overlay">
 				<div class="row">
@@ -26,7 +26,6 @@
 						     <p class="card-text"><%= @course.summary %></p>
 						    <a href="#" class="card-link btn btn-card-start-black">START</a>
 							<a href="#" class="card-link btn btn-outline-secondary">LEAVE PATH</a>
-							<a href="#" class="card-link btn btn-outline-secondary">BOOKMARK</a>
 
 						</div>
 					</div>
@@ -52,21 +51,19 @@
 <div class="container-fluid">
 	<hr>
 		<div class="row">
-			
+
 			<div class="col-md-8">
-				
+
 				<h3 class="course_card_header">About This Course</h3>
 
 				<p class="course_card_description"><%= @course.description %> </p>
-
-				<h3 class="course_card_header">About This Course</h3>
 
 				<div class="embed-responsive embed-responsive-16by9">
 					  <iframe class="embed-responsive-item" src="<%= @course.support_video %>" allowfullscreen></iframe>
 				</div>
 
 			</div>
-	
+
 			<div class="col-md-4">
 				<div class="row">
 					<div class="col-md-8">
@@ -91,7 +88,7 @@
 	</div>
 
 	<div class="row">
-	
+
 		<div class="col-md-12">
 			<h3 class="course_card_header">What You Will Learn</h3>
 				<ul class="fa-ul list-group">
@@ -100,7 +97,7 @@
 				<% end %>
 				</ul>
 		</div>
-	
+
 		</div>
 	</div>
 
