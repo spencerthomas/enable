@@ -1,5 +1,5 @@
 class ProgressesController < ApplicationController
-  
+
   before_filter :authenticate_user!
 
   def show
@@ -9,7 +9,6 @@ class ProgressesController < ApplicationController
     completed_chapters = completed_chapters.each { |c| c.completed = true }
     chapters = course_chapters - course_chapters.where(id: progresses)
     final = chapters + completed_chapters
-    render json: final.sort_by!(&:id)
   end
 
 
@@ -19,7 +18,7 @@ class ProgressesController < ApplicationController
       :chapter_id => params[:chapter_id]
     )
     render json: { progress: @progress }
-  end 
+  end
 
 
   def delete

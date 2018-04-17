@@ -1,4 +1,4 @@
-Rails.application.routes.draw do  
+Rails.application.routes.draw do
 
   get 'search/index'
 
@@ -29,7 +29,7 @@ Rails.application.routes.draw do
   get    "chapters/read" => "progresses#show"
   post   "chapters/mark_as_complete" => "progresses#create"
   delete "chapters/mark_as_incomplete" => "progresses#delete"
-  
+
   #Subscriptions
   resources :charges
 
@@ -46,6 +46,8 @@ Rails.application.routes.draw do
   get 'pages/chapter_cover'
 
   get 'pages/course_video'
+
+  get 'pages/home'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -1,8 +1,25 @@
 <div class="container-fluid">
-	<div class="row">
+  <div class="row justify-content-center">
+    <div class="jumbotron">
+          <div class="container">
+            <div class="row welcome_path">
+              <div class="col-lg-6 welcome_content">
+                <h1>All Our Topics</h1>
+                <p>Our topics cover the breadth and depth of music production techniques.</p>
+            </div>
+            <div class="col-lg-6 library_image hidden-md-down">
+            <%= image_tag("welcome_header.png", class: "img-fluid") %>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
 
-		<%= render "topics/topic" %>
-	
+	<div class="container-fluid">
+		<div class="row">
+
+			<%= render "topics/topic" %>
+
+		</div>
+
 	</div>
-
-</div>

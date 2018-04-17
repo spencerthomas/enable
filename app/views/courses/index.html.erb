@@ -19,19 +19,15 @@
 
 <div class="container">
 	<div class="row justify-content-center">
-		<div class="col-lg-12 search_bar">
-			<ul class="list-inline vertical-center">
-				<li class="list-inline-item pull-left align-middle"><i class="fa fa-search fa-2"></i></li>
-				
-				<li class="list-inline-item"></li>
-				<li class="list-inline-item pull-right align-middle">Newest<i class="fa fa-angle-down"></i></li>
-				<li class="list-inline-item pull-right align-middle">All Types<i class="fa fa-angle-down"></i></li>
-				<li class="list-inline-item pull-right"><span class="align-middle">All Topics<i class="fa fa-angle-down"></i></span></li>
-			</ul>
+		<div class="col-lg-12 search_bar ">
+			<form class="form-inline justify-content-between">
+				<input class="form-inline form-control mr-sm-2 search-focus" type="search" placeholder="Search" aria-label="search">
+				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+			</form>
 		</div>
 	</div>
-
 </div>
+
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-lg-12">
@@ -49,11 +45,13 @@
 			<p>Browse courses across an array of topics and disciplines.</p>
 		</div>
 		<div class="col-lg-2 col-sm-2">
-		<br>
-			<button type="button" class="btn btn-outline-primary pull-right">View All  -   <span class="badge badge-default badge-pill"><%= course_count %></span></button>
+
+			<%= link_to  "View All - #{course_count}", courses_path, class: "btn btn-outline-primary pull-right" %>
+
 		</div>
 
 		<%= render 'courses/course' %>
+		
 	</div>
 
 	<hr>
@@ -62,27 +60,28 @@
 		<div class="col-lg-10 col-sm-10">
 			<h3>Topics</h3>
 			<p>Browse content by the topics that interest you most.</p>
-		<br>
+		</div>
+		<div class="col-lg-2 col-sm-2">
 			<%= link_to "View All  -  #{topic_count}",topics_path, class: "btn btn-outline-primary" %>
 		</div>
 	</div>
 
 	<div class="row">
 
-	<%= render 'courses/topic' %>
-	
-	
+		<%= render 'courses/topic' %>
+
 	</div>
 
 	<hr>
 
 	<div class="row">
-		<div class="col-lg-12">
+		<div class="col-lg-10 col-sm-10">
 			<h3>Workshops</h3>
-			<p>Technique focused presentations and talks.<button type="button" class="btn btn-outline-primary pull-right">View All <span class="badge badge-default badge-pill">148</span></button></p>
+			<p>Technique focused presentations and talks.</p>
+		</div>
+		<div class="col-lg-2 col-sm-2">
+			<%= link_to "VIEW ALL - 148", courses_path, class: "btn btn-outline-primary pull-right" %>
 		</div>
 
 	<%= render 'courses/workshops' %>
 	</div>
-
-

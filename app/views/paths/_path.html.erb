@@ -1,5 +1,5 @@
  <% @paths.each do |path| %>
-  
+
   <div class="col-md-4">
           <div class="card">
             <%= image_tag(path.cover_image, class: "card-img-top img-fluid") %>
@@ -22,10 +22,17 @@
               <%= link_to  "LEARN", path_path(path.id), class: "btn btn btn-card-start card-link" %>
               <span class="bottom_icons">
                 <i class="fa fa-info-circle fa-2x bottom_font_icon"></i>
-                <i class="fa fa-play-circle fa-2x bottom_font_icon"></i>
+                <%= link_to path_path(path.id) do %>
+                 <i class="fa fa-play-circle fa-2x bottom_font_icon"></i>
+                 <% end %>
+
+                <!-- Modal -->
+
+                <%= render 'modal' %>
+
             </span>
             </div>
          </div>
     </div>
-    
+
 <% end %>

@@ -78,6 +78,13 @@
 .bottom_font_icon {
 	vertical-align: middle;
 	margin-left: 21px;
+	color: black;
+}
+
+.bottom_font_icon:hover {
+	vertical-align: middle;
+	margin-left: 21px;
+	color: #50e3c2;
 }
 
 //Topic Card
@@ -238,7 +245,7 @@
 }
 
 .video_content {
-	
+
 }
 
 .tab-pane {
@@ -275,4 +282,3 @@ th:nth-last-child(3),
 td:nth-last-child(3) {
     text-align: right;
 }
-

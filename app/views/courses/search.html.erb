@@ -1,7 +1,7 @@
 <h1>Search</h1>
 
 <section class="search-form">
-	<%= simple_form_for @courses, method: :get do |f| %>
+	<%= simple_form_for (courses_path, method: :get) do |f| %>
 
 	<div class="input-group input-group-lg">
 		<%= label_tag :keywords, nil, class: "sr-only" %>
@@ -20,12 +20,12 @@
 	<h1>Results</h1>
 
 	<table class="table table-striped">
-		<thead> 
+		<thead>
 			<tr>
 			<th>Title</th>
 			<th>Description</th>
 		</tr>
-		</thead>	
+		</thead>
 		<tbody>
 			<% @course.each do |course| %>
 			<tr>
@@ -41,7 +41,7 @@
 		<div class="col-lg-12 search_bar">
 			<ul class="list-inline vertical-center">
 				<li class="list-inline-item pull-left align-middle"><i class="fa fa-search fa-2"></i></li>
-				
+
 				<li class="list-inline-item"></li>
 				<li class="list-inline-item pull-right align-middle">Newest<i class="fa fa-angle-down"></i></li>
 				<li class="list-inline-item pull-right align-middle">All Types<i class="fa fa-angle-down"></i></li>
@@ -92,20 +92,3 @@
 		</div>
 
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -17,6 +17,7 @@ class CoursesController < ApplicationController
   def show
     @course = Course.find(params[:id])
     @chapters = @course.chapters.all
+    @first_chapter = @course.chapters.first
   end
 
   # GET /users/new
@@ -45,7 +46,7 @@ class CoursesController < ApplicationController
 	  		end
 	  	end
   end
-  
+
 
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
@@ -82,7 +83,6 @@ class CoursesController < ApplicationController
      # Use callbacks to share common setup or constraints between actions.
 
      def course_params
-     	params.require(:course).permit(:title, :summary, :description, :thumbnail, :feature_image, :support_video, :tag_list, :path_id, :topic_id)
+     	params.require(:course).permit(:title, :summary, :description, :thumbnail, :feature_image, :support_video, :tag_list, :path_id, :topic_id, :keywords)
      end
 end
-
